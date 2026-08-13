@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Apple Leaders — продажа, ремонт и настройка техники Apple. Б/у iPhone, ремонт, Trade-in и услуги.">
+  <title>Apple Leaders — Apple техника и ремонт</title>
+  <style>
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:#fff;color:#111;line-height:1.5}
+    .container{width:min(1160px,calc(100% - 40px));margin:auto}.header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid #e9e9e9}
+    .nav{height:72px;display:flex;align-items:center;gap:35px}.logo{font-weight:900;letter-spacing:-1px;text-decoration:none;color:#111;font-size:18px;white-space:nowrap}.logo span{color:#1683ff}
+    nav{display:flex;gap:25px;margin-left:auto}nav a{color:#444;text-decoration:none;font-size:14px}.nav-btn{background:#111;color:#fff;text-decoration:none;padding:11px 18px;border-radius:12px;font-weight:700;font-size:14px}
+    .hero{overflow:hidden;background:linear-gradient(135deg,#fff 0%,#f3f8ff 55%,#e9f3ff 100%);padding:80px 0 70px}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:30px}
+    .badge,.eyebrow{color:#1683ff;font-weight:800;font-size:12px;letter-spacing:2px}.hero h1{font-size:clamp(48px,7vw,82px);line-height:.98;letter-spacing:-4px;margin:18px 0}.hero h1 span{color:#1683ff}
+    .hero-text{max-width:650px;color:#555;font-size:19px}.hero-actions{display:flex;gap:12px;margin:30px 0}.btn{display:inline-flex;justify-content:center;align-items:center;text-decoration:none;border-radius:14px;padding:14px 23px;font-weight:800}.primary{background:#1683ff;color:#fff}.secondary{border:1px solid #d5d5d5;color:#111;background:#fff}
+    .stats{display:flex;gap:35px;margin-top:38px}.stats div{display:flex;flex-direction:column}.stats b{font-size:25px}.stats span{color:#777;font-size:12px}.device-card{height:460px;display:flex;align-items:center;justify-content:center;position:relative}
+    .glow{position:absolute;width:330px;height:330px;background:#1683ff;filter:blur(90px);opacity:.22}.iphone{width:215px;height:410px;border:8px solid #171717;border-radius:40px;background:#111;position:relative;box-shadow:25px 35px 60px rgba(0,0,0,.25);transform:rotate(7deg)}
+    .screen{position:absolute;inset:5px;border-radius:31px;background:linear-gradient(145deg,#0a0a0a,#176fff);display:flex;align-items:center;justify-content:center;flex-direction:column;color:white}.camera{position:absolute;z-index:2;top:12px;left:50%;transform:translateX(-50%);width:72px;height:18px;background:#050505;border-radius:20px}.screen-logo{font-size:65px}.screen-text{text-align:center;font-weight:900;letter-spacing:2px;font-size:12px}
+    .section{padding:95px 0}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:40px}.section-head p{max-width:420px;color:#777;margin:0}h2{font-size:48px;line-height:1;letter-spacing:-2px;margin:12px 0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{border:1px solid #e8e8e8;border-radius:20px;padding:28px;min-height:210px}.icon{font-size:30px;margin-bottom:20px}.card h3{margin:0 0 8px;font-size:21px}.card p{margin:0;color:#777}
+    .dark-section{background:#0d0d0f;color:#fff}.dark-section .eyebrow{color:#55a8ff}.price-list{margin-top:35px;border-top:1px solid #333}.price-list div{display:flex;justify-content:space-between;gap:20px;padding:20px 0;border-bottom:1px solid #333;color:#ddd}.price-list b{color:#fff;white-space:nowrap}.note{color:#777;font-size:13px}
+    .repair-prices{margin-top:75px}.repair-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:30px}.repair-head p{max-width:420px;color:#aaa;margin:0}
+    .table-wrap{overflow-x:auto;border:1px solid #333;border-radius:18px}.repair-table{width:100%;min-width:680px;border-collapse:collapse}.repair-table th,.repair-table td{padding:16px 18px;text-align:left;border-bottom:1px solid #333}.repair-table th{background:#151519;color:#55a8ff;font-size:13px;white-space:nowrap}.repair-table td{color:#ddd}.repair-table td:not(:first-child){font-weight:700;color:#fff;white-space:nowrap}.repair-table tr:last-child td{border-bottom:0}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}.about-text{color:#666;font-size:18px}.contact-section{padding:80px 0;background:#1683ff}.contact-box{background:#fff;border-radius:28px;padding:50px;display:flex;align-items:center;justify-content:space-between;gap:30px}.contact-actions{display:flex;gap:12px}.big{min-width:130px}.contact-section h2{font-size:46px}
+    footer{background:#0d0d0f;color:#888;padding:28px 0}.footer{display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:12px}.footer .logo{color:#fff}
+    @media(max-width:800px){.nav{gap:15px}nav{display:none}.hero{padding-top:55px}.hero-grid{grid-template-columns:1fr}.device-card{height:360px}.cards{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr;gap:20px}.contact-box{flex-direction:column;align-items:flex-start}.footer{flex-direction:column;align-items:flex-start}.repair-head{display:block}.repair-head p{margin-top:18px}}
+    @media(max-width:520px){.container{width:min(100% - 28px,1160px)}.hero h1{font-size:50px;letter-spacing:-3px}.hero-text{font-size:16px}.stats{gap:18px}.cards{grid-template-columns:1fr}.section{padding:65px 0}h2{font-size:38px}.section-head{display:block}.section-head p{margin-top:18px}.contact-box{padding:30px}.contact-section h2{font-size:38px}.contact-actions{width:100%}.contact-actions .btn{flex:1}}
+  </style>
+</head>
+<body>
+<header class="header"><div class="container nav">
+  <a class="logo" href="#top"><span>APPLE</span> LEADERS</a>
+  <nav><a href="#services">Услуги</a><a href="#prices">Цены</a><a href="#iphone-repair">Ремонт iPhone</a><a href="#about">О нас</a><a href="#contacts">Контакты</a></nav>
+  <a class="nav-btn" href="#contacts">Связаться</a>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="container hero-grid"><div>
+  <div class="badge">APPLE • REPAIR • SALES</div><h1>Техника Apple.<br><span>Без лишних слов.</span></h1>
+  <p class="hero-text">Продажа б/у iPhone, ремонт Apple, покупка и Trade-in, настройка устройств и перенос данных.</p>
+  <div class="hero-actions"><a class="btn primary" href="#services">Наши услуги</a><a class="btn secondary" href="#contacts">Написать нам</a></div>
+  <div class="stats"><div><b>5+</b><span>лет опыта</span></div><div><b></b><span>техника Apple</span></div><div><b>1</b><span>место для решения</span></div></div>
+</div><div class="device-card"><div class="glow"></div><div class="iphone"><div class="camera"></div><div class="screen"><div class="screen-logo"></div><div class="screen-text">APPLE<br>LEADERS</div></div></div></div></div></section>
+
+<section id="services" class="section"><div class="container"><div class="section-head"><div><div class="eyebrow">ЧТО МЫ ДЕЛАЕМ</div><h2>Услуги</h2></div><p>От настройки до ремонта — поможем привести устройство в порядок.</p></div>
+<div class="cards">
+<article class="card"><div class="icon">📱</div><h3>Ремонт iPhone</h3><p>Замена дисплеев, аккумуляторов, модульный ремонт и диагностика.</p></article>
+<article class="card"><div class="icon">🔋</div><h3>Аккумулятор</h3><p>Замена батареи, диагностика состояния и рекомендации по эксплуатации.</p></article>
+<article class="card"><div class="icon">💾</div><h3>Перенос данных</h3><p>Перенос данных iPhone→iPhone и Android→iPhone.</p></article>
+<article class="card"><div class="icon">⚙️</div><h3>Настройка</h3><p>Apple ID, приложения, Windows на Mac и другие настройки.</p></article>
+<article class="card"><div class="icon">🧼</div><h3>Чистка</h3><p>Чистка сетки динамика и разъёма зарядки.</p></article>
+<article class="card"><div class="icon">🔄</div><h3>Покупка / Trade-in</h3><p>Рассмотрим iPhone, MacBook, Apple Watch и AirPods.</p></article>
+</div></div></section>
+
+<section id="prices" class="section dark-section"><div class="container">
+<div class="eyebrow">ПРОЗРАЧНЫЕ ЦЕНЫ</div><h2>Популярные услуги</h2>
+<div class="price-list">
+<div><span>Создание Apple ID</span><b>900 ₽</b></div><div><span>Перенос iPhone → iPhone до 256 ГБ</span><b>2 000 ₽</b></div><div><span>Перенос iPhone → iPhone до 512 ГБ</span><b>3 000 ₽</b></div><div><span>Перенос Android → iPhone</span><b>3 000 ₽</b></div><div><span>Установка приложений — 1 приложение</span><b>350 ₽</b></div><div><span>Чистка динамика + разъёма</span><b>500 ₽</b></div><div><span>Защитное стекло</span><b>300 ₽</b></div><div><span>Windows 10/11 на Mac</span><b>5 000 ₽</b></div><div><span>Чистка MacBook + термопаста</span><b>3 000 ₽</b></div>
+</div><p class="note">Точную стоимость ремонта определяем после диагностики.</p>
+
+<div id="iphone-repair" class="repair-prices"><div class="repair-head"><div><div class="eyebrow">РЕМОНТ IPHONE</div><h2>Дисплеи и аккумуляторы</h2></div><p>Цены по предоставленному прайсу. Указаны цены на замену дисплея и аккумулятора.</p></div>
+<div class="table-wrap"><table class="repair-table"><thead><tr><th>Модель</th><th>Дисплей оригинал</th><th>Дисплей копия</th><th>Замена АКБ</th></tr></thead><tbody><tr><td>iPhone 7</td><td>3 000 ₽</td><td>1 800 ₽</td><td>1 600 ₽</td></tr><tr><td>iPhone 7 Plus</td><td>4 000 ₽</td><td>2 200 ₽</td><td>1 800 ₽</td></tr><tr><td>iPhone 8</td><td>3 500 ₽</td><td>2 200 ₽</td><td>1 900 ₽</td></tr><tr><td>iPhone 8 Plus</td><td>4 000 ₽</td><td>2 200 ₽</td><td>2 100 ₽</td></tr><tr><td>iPhone X</td><td>6 500 ₽</td><td>3 300 ₽</td><td>2 500 ₽</td></tr><tr><td>iPhone XR</td><td>5 000 ₽</td><td>3 600 ₽</td><td>2 800 ₽</td></tr><tr><td>iPhone XS</td><td>7 200 ₽</td><td>3 600 ₽</td><td>2 800 ₽</td></tr><tr><td>iPhone XS Max</td><td>8 500 ₽</td><td>4 000 ₽</td><td>3 000 ₽</td></tr><tr><td>iPhone 11</td><td>6 700 ₽</td><td>4 200 ₽</td><td>3 500 ₽</td></tr><tr><td>iPhone 11 Pro</td><td>9 000 ₽</td><td>5 000 ₽</td><td>4 000 ₽</td></tr><tr><td>iPhone 11 Pro Max</td><td>10 000 ₽</td><td>5 500 ₽</td><td>4 000 ₽</td></tr><tr><td>iPhone SE 2020/2022</td><td>3 500 ₽</td><td>2 200 ₽</td><td>1 900 ₽</td></tr><tr><td>iPhone 12 mini</td><td>10 000 ₽</td><td>6 000 ₽</td><td>5 200 ₽</td></tr><tr><td>iPhone 12</td><td>9 500 ₽</td><td>6 500 ₽</td><td>5 200 ₽</td></tr><tr><td>iPhone 12 Pro</td><td>9 500 ₽</td><td>6 500 ₽</td><td>5 200 ₽</td></tr><tr><td>iPhone 12 Pro Max</td><td>15 500 ₽</td><td>7 000 ₽</td><td>5 500 ₽</td></tr><tr><td>iPhone 13 mini</td><td>11 500 ₽</td><td>6 500 ₽</td><td>6 000 ₽</td></tr><tr><td>iPhone 13</td><td>11 000 ₽</td><td>6 500 ₽</td><td>5 500 ₽</td></tr><tr><td>iPhone 13 Pro</td><td>17 000 ₽</td><td>10 000 ₽</td><td>6 000 ₽</td></tr><tr><td>iPhone 13 Pro Max</td><td>21 000 ₽</td><td>10 500 ₽</td><td>6 000 ₽</td></tr><tr><td>iPhone 14</td><td>15 500 ₽</td><td>7 500 ₽</td><td>6 000 ₽</td></tr><tr><td>iPhone 14 Plus</td><td>17 500 ₽</td><td>8 500 ₽</td><td>6 500 ₽</td></tr><tr><td>iPhone 14 Pro</td><td>26 500 ₽</td><td>12 000 ₽</td><td>7 000 ₽</td></tr><tr><td>iPhone 14 Pro Max</td><td>30 000 ₽</td><td>16 000 ₽</td><td>7 500 ₽</td></tr><tr><td>iPhone 15</td><td>20 000 ₽</td><td>13 000 ₽</td><td>6 000 ₽</td></tr><tr><td>iPhone 15 Pro</td><td>31 500 ₽</td><td>15 000 ₽</td><td>8 000 ₽</td></tr><tr><td>iPhone 15 Pro Max</td><td>35 000 ₽</td><td>20 000 ₽</td><td>8 500 ₽</td></tr></tbody></table></div>
+<p class="note">Перед ремонтом уточняйте наличие запчастей и итоговую стоимость. Цена АКБ указана за замену аккумулятора.</p></div>
+</div></section>
+
+<section id="about" class="section"><div class="container about"><div><div class="eyebrow">APPLE LEADERS</div><h2>Знаем технику Apple<br>и умеем с ней работать.</h2></div><div class="about-text"><p>Работаем с техникой Apple больше 5 лет. Помогаем с покупкой, ремонтом, переносом данных и настройкой устройств.</p><p>Если не знаете, что случилось с устройством — приходите на диагностику. Разберёмся и предложим оптимальное решение.</p></div></div></section>
+
+<section id="contacts" class="contact-section"><div class="container contact-box"><div><div class="eyebrow">СВЯЗАТЬСЯ С НАМИ</div><h2>Есть вопрос?<br>Напишите нам.</h2><p>Ответим в VK или Telegram и подскажем, что делать с вашим устройством.</p></div><div class="contact-actions"><a class="btn primary big" href="https://vk.ru/appleleadersphone" target="_blank" rel="noopener">VK</a><a class="btn secondary big" href="https://t.me/appleleaders" target="_blank" rel="noopener">Telegram</a></div></div></section>
+</main>
+<footer><div class="container footer"><div class="logo"><span>APPLE</span> LEADERS</div><div>Продажа • Ремонт • Настройка Apple</div><div>© 2026 Apple Leaders</div></div></footer>
+</body></html>
